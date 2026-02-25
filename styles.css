@@ -1,14 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3e5f5;
+    background-color: #ffffff;
     color: #4a148c;
     margin: 0;
 }
 
 header {
-    background-color: #e1bee7;
     padding: 10px 20px;
     text-align: center;
+}
+
+a {
+    font-weight: bold;
+}
+
+button {
+  /* Базовые стили */
+  padding: 12px 28px;
+  margin: 15px 0px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a148c; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Плавность всех изменений */
+  transition: all 0.3s ease;
+  
+  /* Тень для объема */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Эффект при наведении курсора */
+button:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px); /* Кнопка слегка "всплывает" */
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4); /* Цветная тень */
+}
+
+/* Эффект при нажатии */
+button:active {
+  transform: translateY(0); /* Кнопка возвращается на место */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -32,6 +68,16 @@ section {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+  max-height: 0;                /* Скрываем секцию */
+  overflow: hidden;             /* Прячем контент за границами */
+  transition: max-height 0.3s ease-out; /* Плавность */
+}
+
+.content-section.open {
+  max-height: 500px;            /* Достаточная высота для отображения */
 }
 
 .project {

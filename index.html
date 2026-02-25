@@ -8,37 +8,57 @@
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на мой сайт</h1>
+        <h1>ML Portfolio</h1>
+            <!---
         <nav>
             <ul>
                 <li><a href="#about">Обо мне</a></li>
                 <li><a href="#projects">Проекты</a></li>
             </ul>
         </nav>
+            -->
     </header>
     
     <section id="about">
         <h2>Обо мне</h2>
-        <p>Хелло!</p>
+
+        <button class="toggle-btn">Образование</button>
+        <div class="content-section">
+            <b>Бакалавриат</b>
+            <p>Томский государственный университет (ТГУ)  |  2021-2025</p>                           
+            <p>Факультет: Институт прикладной математики и компьютерных наук</p>
+            <p>Направление: Фундаментальная информатика и информационные технологии</p>
+            <p>Специализация: Искусственный интеллект и разработка программных продуктов</p>
+            <br>
+            <b>Магистратура</b>
+            <p>Университет ИТМО | 2025-2027</p>                           
+            <p>Факультет: Информационные технологии и программирование</p>
+            <p>Направление: Математическое и компьютерное моделирование</p>
+        </div>        
+
     </section>
     
     <section id="projects">
         <h2>Проекты</h2>
-        <div class="project" id="project1">
-            <h3>Проект 1</h3>
-            <p>Описание проекта 1.</p>
-        </div>
-        <div class="project" id="project2" style="display: none;">
-            <h3>Проект 2</h3>
-            <p>Описание проекта 2.</p>
-        </div>
-        <div class="project" id="project3" style="display: none;">
-            <h3>Проект 3</h3>
-            <p>Описание проекта 3.</p>
-        </div>
-        <button onclick="showProject(1)">Проект 1</button>
-        <button onclick="showProject(2)">Проект 2</button>
-        <button onclick="showProject(3)">Проект 3</button>
+        <button class="toggle-btn">Поиск аномалий в финансах</button>
+        <div class="content-section">
+            <p>Данные по бирже NYSE о 20 компаниях в секторе здравоохранения (Healthcare), капитализация которых превышает $1 млрд.</p>
+            <p>Данные с сайта https://finance.yahoo.com, для загрузки данных используется библиотека yfinance. Для недостающих значений использовался сайт investing.com</p>
+            <br><b>Методы выявления аномалий</b>
+            <ul>
+            <li>Одноклассовый метод опорных векторов (SVM)</li>
+            <li>Эллиптическая оболочка (Elliptic Envelope)</li>
+            <li>Фактор локального выброса (Local outlier factor)</li>
+            <li>Изолированный лес (Isolation forest)</li>
+            </ul>
+            <a href="https://github.com/rinaAks/anomalies-search-finance">Ссылка</a>
+        </div>  
+
+        <button class="toggle-btn">Проект 2</button>
+        <div class="content-section">
+            <p>миу миу миу</p>
+        </div> 
+
     </section>
 
     <script src="script.js"></script>
